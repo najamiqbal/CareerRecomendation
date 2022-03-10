@@ -14,20 +14,18 @@ import androidx.fragment.app.Fragment;
 import com.fyp.careerrecomendation.R;
 import com.fyp.careerrecomendation.utils.AppConstants;
 
-public class AboutUsFragment extends Fragment {
+public class FeedBackFragment extends Fragment {
     View view;
     TextView textView;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.about_us_fragment,container,false);
-        textView=view.findViewById(R.id.tv_company);
-        textView.setText(Html.fromHtml(AppConstants.company));
+        view=inflater.inflate(R.layout.feedback_fragment,container,false);
         return view;
     }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        getActivity().setTitle("About Us");
+        getActivity().setTitle("FeedBack");
         super.onViewCreated(view, savedInstanceState);
     }
 }

@@ -26,6 +26,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
             android:padding="6dp">
 
             <ImageView
@@ -43,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/quiz_image"
                 android:layout_alignParentBottom="true"
-                android:fontFamily="@font/tajawal_medium"
+                android:fontFamily="@font/lato_bold"
                 android:padding="5dp"
                 android:text="Career Recomendation"
                 android:textColor="@color/black"
@@ -64,6 +65,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/whatsapp_color"
             android:padding="6dp">
 
             <ImageView
@@ -81,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/color_image"
                 android:layout_alignParentBottom="true"
-                android:fontFamily="@font/tajawal_medium"
+                android:fontFamily="@font/lato_bold"
                 android:padding="5dp"
                 android:text="University Info Desk"
                 android:textColor="@color/black"
@@ -103,6 +105,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/purple_200"
             android:padding="6dp">
 
             <ImageView
@@ -120,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/docotrs_image"
                 android:layout_alignParentBottom="true"
-                android:fontFamily="@font/tajawal_medium"
+                android:fontFamily="@font/lato_bold"
                 android:padding="5dp"
                 android:text="Career Counselor's List"
                 android:textColor="@color/black"

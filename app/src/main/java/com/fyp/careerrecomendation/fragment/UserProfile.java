@@ -30,7 +30,6 @@ public class UserProfile extends Fragment {
     private void initialization() {
         pDialog = new ProgressDialog(getContext());
         pDialog.setCancelable(false);
-        edit_addres=view.findViewById(R.id.user_address_edit);
         edit_name=view.findViewById(R.id.user_name_edit);
         edit_mobile=view.findViewById(R.id.user_mobile_number_edit);
         edit_email=view.findViewById(R.id.user_email_edit);

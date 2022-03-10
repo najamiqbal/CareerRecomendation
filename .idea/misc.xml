@@ -4,11 +4,36 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/drawable/button_style.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/drawable/comentboxstyle.xml" value="0.3728205128205128" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/drawable/edit_text_style.xml" value="0.3728205128205128" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/drawable/ic_arrow_forward.xml" value="0.3728205128205128" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/drawable/ic_home.xml" value="0.3728205128205128" />
         <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/about_us_fragment.xml" value="0.3625" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/activity_main.xml" value="0.1762917933130699" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/app_bar_main.xml" value="0.3625" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/conselers_list_fragment.xml" value="0.3625" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/conselers_list_viewholder.xml" value="0.3625" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/contact_us_fragment.xml" value="0.3625" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/departments_list_fragment.xml" value="0.3625" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/detect_color_activity.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/doctor_home_fragment.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/doctors_list_fragment.xml" value="0.3625" />
         <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/doctors_list_viewholder.xml" value="0.19882246376811594" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/feedback_fragment.xml" value="0.1762917933130699" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/forgetpass_verifycode_fragment.xml" value="0.3625" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/fragment_forgetpassword.xml" value="0.3625" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/info_detail_fragment.xml" value="0.3625" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/info_point_list_viewholder.xml" value="0.3625" />
         <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/login_fragment.xml" value="0.19882246376811594" />
-        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/singup_fragment_user.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/patient_reports_list_viewholder.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/resetpassword_fragment.xml" value="0.3625" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/result_fragment.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/signup_docotr_fragment.xml" value="0.3625" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/singup_fragment_user.xml" value="0.33" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/uni_info_desk.xml" value="0.3625" />
         <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/user_home_fragment.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/user_profile.xml" value="0.3625" />
+        <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/layout/verify_code_fragment.xml" value="0.3625" />
         <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/menu/activity_main_drawer.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/Black Panther/AndroidStudioProjects/CareerRecomendation/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Black Panther/AndroidStudioProjects/ColorBlindness/app/src/main/res/drawable-v24/bg_btn_circle.xml" value="0.35555555555555557" />

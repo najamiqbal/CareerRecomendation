@@ -7,7 +7,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.fyp.careerrecomendation.R;
-import com.fyp.careerrecomendation.fragment.AboutUsFragment;
+import com.fyp.careerrecomendation.fragment.FeedBackFragment;
+import com.fyp.careerrecomendation.fragment.ConselorsListFragment;
 import com.fyp.careerrecomendation.fragment.ContactUsFragment;
 import com.fyp.careerrecomendation.fragment.UserHomeFragment;
 
@@ -61,6 +62,13 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                     new PatientHomeFragment()).commit();*/
 
         }
+        if (id == R.id.nav_consultants_list) {
+
+            getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            getSupportFragmentManager().beginTransaction().replace(R.id.user_main_frame,
+                    new ConselorsListFragment()).addToBackStack("fragment").commit();
+
+        }
         else if (id == R.id.nav_profile) {
 
             getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
@@ -68,11 +76,11 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                     new UserProfile()).addToBackStack("fragment").commit();
 
         }
-        else if (id == R.id.nav_about) {
+        else if (id == R.id.nav_feedback) {
 
             getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
             getSupportFragmentManager().beginTransaction().replace(R.id.user_main_frame,
-                    new AboutUsFragment()).addToBackStack("fragment").commit();
+                    new FeedBackFragment()).addToBackStack("fragment").commit();
 
         }else if (id == R.id.nav_contact) {
 

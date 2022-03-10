@@ -52,7 +52,6 @@ View view;
         et_name_user = view.findViewById(R.id.user_name);
         et_email_user = view.findViewById(R.id.user_email);
         et_mobile_user = view.findViewById(R.id.user_mobile_number);
-        et_address_user = view.findViewById(R.id.user_address);
         et_password_user = view.findViewById(R.id.user_password);
         et_confirm_password_user = view.findViewById(R.id.user_confirm_password);
         registration_btn_user = view.findViewById(R.id.register_btn_buyer);

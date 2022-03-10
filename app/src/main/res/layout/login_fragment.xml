@@ -16,14 +16,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <TextView
                 android:id="@+id/img"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
+                android:text="Login"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:fontFamily="@font/lato_bold"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/applogo" />
+                android:layout_marginTop="20dp" />
 
             <LinearLayout
                 android:id="@+id/emptylayout"
@@ -52,6 +57,7 @@
                     android:drawableLeft="@drawable/ic_email"
                     android:drawablePadding="10dp"
                     android:hint="Enter Email"
+                    android:fontFamily="@font/lato_regular"
                     android:inputType="textEmailAddress"
                     android:padding="10dp"
                     android:textColor="@color/colorPrimary"
@@ -68,6 +74,7 @@
                     android:drawableLeft="@drawable/ic_lock"
                     android:drawablePadding="10dp"
                     android:hint="Password"
+                    android:fontFamily="@font/lato_regular"
                     android:inputType="textPassword"
                     android:padding="10dp"
                     android:textColor="@color/colorPrimary"
@@ -81,6 +88,7 @@
                     android:layout_height="wrap_content"
                     android:text="Forget your password?"
                     android:textSize="14sp"
+                    android:fontFamily="@font/lato_regular"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/colorPrimary"
                     android:layout_gravity="right"/>
@@ -91,6 +99,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_style"
                     android:text="login now"
+                    android:fontFamily="@font/lato_bold"
                     android:layout_marginTop="15dp"
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
@@ -108,6 +117,7 @@
                 android:drawableRight="@drawable/ic_arrow_forward"
                 android:drawablePadding="10dp"
                 android:padding="5dp"
+                android:fontFamily="@font/lato_bold"
                 android:text="Register as new user"
                 android:textAllCaps="false"
                 android:textColor="@color/colorPrimary"

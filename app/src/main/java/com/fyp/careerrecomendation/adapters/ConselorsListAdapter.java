@@ -30,14 +30,14 @@ public class ConselorsListAdapter extends RecyclerView.Adapter<ConselorsListAdap
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.doctors_list_viewholder, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.conselers_list_viewholder, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.dr_email.setOnClickListener(new View.OnClickListener() {
+   /*     holder.dr_email.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + "123456"));
@@ -58,7 +58,7 @@ public class ConselorsListAdapter extends RecyclerView.Adapter<ConselorsListAdap
             public void onClick(View view) {
                 openWhatsApp("123456");
             }
-        });
+        });*/
     }
 
     @Override
@@ -71,12 +71,9 @@ public class ConselorsListAdapter extends RecyclerView.Adapter<ConselorsListAdap
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            dr_name=itemView.findViewById(R.id.txt_report_id);
-            dr_address=itemView.findViewById(R.id.txt_draddress);
-            dr_spec=itemView.findViewById(R.id.txt_dr_specialization);
-            dr_email=itemView.findViewById(R.id.btn_dr_email);
-            dr_mobile=itemView.findViewById(R.id.btn_dr_call);
-            dr_whatsapp=itemView.findViewById(R.id.btn_dr_whatsapp);
+            dr_name=itemView.findViewById(R.id.consultant_name);
+            dr_spec=itemView.findViewById(R.id.txt_study);
+
         }
     }
 

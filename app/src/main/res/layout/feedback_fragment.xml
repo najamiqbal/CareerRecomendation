@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:text="Your FeedBack"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/textArea_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/comentboxstyle"
+        android:gravity="top|start"
+        android:hint="Write your feedback here"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:fontFamily="@font/lato_regular"
+        android:overScrollMode="always"
+        android:padding="6dp"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/submitComplain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textArea_information"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/lato_bold"
+        android:background="@drawable/button_style"
+        android:text="Submit"
+        android:textColor="#FFF"
+        android:textSize="20sp" />
+</RelativeLayout>

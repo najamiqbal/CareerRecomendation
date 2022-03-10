@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+
+        <TextView
+            android:id="@+id/consultant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/full_name"
+            android:textColor="#262628"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_study"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/consultant_name"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Qualification"
+            android:textColor="#423A3A"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txt_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_study"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/c_address"
+            android:textColor="#423A3A"
+            android:textSize="12sp"/>
+        <TextView
+            android:id="@+id/txt_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_address"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Short Bio"
+            android:textColor="#423A3A"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/btn_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_style"
+            android:text="Call"
+            android:layout_below="@id/txt_bio"
+            android:fontFamily="@font/lato_bold"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/txt_bio"
+            android:layout_marginTop="10dp"
+            android:background="#E1E1E1"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

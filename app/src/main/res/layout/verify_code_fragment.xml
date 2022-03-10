@@ -12,6 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
         android:text="Timer"
+        android:fontFamily="@font/lato_bold"
         android:textColor="@color/colorPrimary"
         android:textSize="20sp" />
 
@@ -22,7 +23,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/resettimer"
         android:layout_marginTop="10dp"
-        android:text="Enter Verification code"
+        android:text="Enter OTP"
         android:textColor="@color/colorPrimary"
         android:textSize="14sp" />
 
@@ -34,6 +35,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:ems="10"
+        android:fontFamily="@font/lato_regular"
         android:padding="8dp"
         android:background="@drawable/edit_text_style"
         android:hint="Verification Code"
@@ -47,6 +49,7 @@
         android:layout_below="@+id/verificationcode"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato_bold"
         android:background="@drawable/button_style"
         android:text="Verify"
         android:textColor="#FFF"/>

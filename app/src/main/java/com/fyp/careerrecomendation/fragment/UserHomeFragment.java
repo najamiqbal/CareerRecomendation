@@ -44,16 +44,19 @@ public class UserHomeFragment extends Fragment implements View.OnClickListener{
 
                 break;
             case R.id.conelors_cardview:
-                ConselorsListFragment doctorsListFragment = new ConselorsListFragment();
+                ConselorsListFragment conselorsListFragment = new ConselorsListFragment();
                 FragmentTransaction fragmentTransaction2 = getFragmentManager().beginTransaction();
-                fragmentTransaction2.replace(R.id.user_main_frame, doctorsListFragment);
+                fragmentTransaction2.replace(R.id.user_main_frame, conselorsListFragment);
                 fragmentTransaction2.addToBackStack("forgetpass_fragment");
                 fragmentTransaction2.commit();
                 break;
             case R.id.uni_desk_cardview:
-
+                UniInfoDeskFragment fragment = new UniInfoDeskFragment();
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.user_main_frame, fragment);
+                fragmentTransaction.addToBackStack("forgetpass_fragment");
+                fragmentTransaction.commit();
                 break;
-
 
         }
     }

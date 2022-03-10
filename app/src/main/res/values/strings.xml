@@ -47,9 +47,9 @@
     <string name="row3Name">Jason</string>
     <string name="row3Age">0</string>
     <string name="row3Surname">William</string>
-    <string name="dr_name">Name</string>
+    <string name="full_name">Full Name</string>
     <string name="short_bio">bio</string>
-    <string name="dr_address">address</string>
+    <string name="c_address">Address</string>
     <string name="dr_whatsapp">Whatsapp</string>
     <string name="dr_call">Call</string>
     <string name="dr_mail">Email</string>

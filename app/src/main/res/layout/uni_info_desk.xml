@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_departments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:drawablePadding="13sp"
+        android:focusable="true"
+        android:fontFamily="@font/lato_bold"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:text="Departments"
+        android:textColor="#363636"
+        android:textSize="20sp"
+        app:drawableStartCompat="@drawable/nextline"
+        app:drawableEndCompat="@drawable/ic_arrow_forward" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#F5F5F5" />
+
+    <TextView
+        android:id="@+id/tv_exam_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:drawablePadding="13sp"
+        android:focusable="true"
+        android:fontFamily="@font/lato_bold"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:text="Academics Policies"
+        android:textColor="#363636"
+        android:textSize="20sp"
+        app:drawableStartCompat="@drawable/nextline"
+        app:drawableEndCompat="@drawable/ic_arrow_forward" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#F5F5F5" />
+
+    <TextView
+        android:id="@+id/tv_library_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:drawablePadding="13sp"
+        android:focusable="true"
+        android:fontFamily="@font/lato_bold"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:text="Library Policy"
+        android:textColor="#363636"
+        android:textSize="20sp"
+        app:drawableStartCompat="@drawable/nextline"
+        app:drawableEndCompat="@drawable/ic_arrow_forward" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#F5F5F5" />
+
+    <TextView
+        android:id="@+id/tv_internship_offered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:drawablePadding="13sp"
+        android:focusable="true"
+        android:fontFamily="@font/lato_bold"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:text="Internship Offered"
+        android:textColor="#363636"
+        android:textSize="20sp"
+        app:drawableStartCompat="@drawable/nextline"
+        app:drawableEndCompat="@drawable/ic_arrow_forward" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#F5F5F5" />
+
+    <TextView
+        android:id="@+id/tv_fee_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:drawablePadding="13sp"
+        android:focusable="true"
+        android:fontFamily="@font/lato_bold"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:text="Fee Policy"
+        android:textColor="#363636"
+        android:textSize="20sp"
+        app:drawableStartCompat="@drawable/nextline"
+        app:drawableEndCompat="@drawable/ic_arrow_forward" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#F5F5F5" />
+
+    <TextView
+        android:id="@+id/tv_rules"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:drawablePadding="13sp"
+        android:focusable="true"
+        android:fontFamily="@font/lato_bold"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:text="Rules and Regulation"
+        android:textColor="#363636"
+        android:textSize="20sp"
+        app:drawableStartCompat="@drawable/nextline"
+        app:drawableEndCompat="@drawable/ic_arrow_forward" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#F5F5F5" />
+
+</LinearLayout>
