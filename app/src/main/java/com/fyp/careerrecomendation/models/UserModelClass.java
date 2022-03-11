@@ -8,9 +8,9 @@ public class UserModelClass {
     private String user_password;
     private String user_type;
     private String user_id;
-    private String specialization;
-    private String company_address;
-    private String doctor_bio;
+    private String qualification;
+    private String busniss_address;
+    private String counselor_bio;
 
     public String getUser_name() {
         return user_name;
@@ -68,27 +68,27 @@ public class UserModelClass {
         this.user_id = user_id;
     }
 
-    public String getSpecialization() {
-        return specialization;
+    public String getQualification() {
+        return qualification;
     }
 
-    public void setSpecialization(String specialization) {
-        this.specialization = specialization;
+    public void setQualification(String qualification) {
+        this.qualification = qualification;
     }
 
-    public String getCompany_address() {
-        return company_address;
+    public String getBusniss_address() {
+        return busniss_address;
     }
 
-    public void setCompany_address(String company_address) {
-        this.company_address = company_address;
+    public void setBusniss_address(String busniss_address) {
+        this.busniss_address = busniss_address;
     }
 
-    public String getDoctor_bio() {
-        return doctor_bio;
+    public String getCounselor_bio() {
+        return counselor_bio;
     }
 
-    public void setDoctor_bio(String doctor_bio) {
-        this.doctor_bio = doctor_bio;
+    public void setCounselor_bio(String counselor_bio) {
+        this.counselor_bio = counselor_bio;
     }
 }

@@ -13,6 +13,8 @@ import com.fyp.careerrecomendation.fragment.ContactUsFragment;
 import com.fyp.careerrecomendation.fragment.UserHomeFragment;
 
 import com.fyp.careerrecomendation.fragment.UserProfile;
+import com.fyp.careerrecomendation.models.UserModelClass;
+import com.fyp.careerrecomendation.utils.SharedPrefManager;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
@@ -27,7 +29,7 @@ import androidx.fragment.app.FragmentManager;
 
 public class MainActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView ownername, ownermail;
+    TextView ownername, ownermail,became_counselor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,20 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+        ownername = navigationView.getHeaderView(0).findViewById(R.id.username);
+        ownermail = navigationView.getHeaderView(0).findViewById(R.id.useremail);
+        became_counselor = navigationView.findViewById(R.id.become_conselor);
+        became_counselor.setOnClickListener(view -> {
+
+            startActivity(new Intent(this,CounselorRegistrationForm.class));
+
+        });
+
+        final UserModelClass userModelClass = SharedPrefManager.getInstance(MainActivity.this).getUser();
+        if (userModelClass != null) {
+            ownername.setText(userModelClass.getUser_name());
+            ownermail.setText(userModelClass.getUser_email());
+        }
         navigationView.setNavigationItemSelectedListener(this);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.user_main_frame,
@@ -90,7 +106,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
         }
         else if (id == R.id.nav_logout) {
-
+            SharedPrefManager.getInstance(MainActivity.this).logOut();
             startActivity(new Intent(this, LoginSignUpActivity.class));
             this.finish();
 

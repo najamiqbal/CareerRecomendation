@@ -1,5 +1,7 @@
 package com.fyp.careerrecomendation.fragment;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,24 +23,36 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.fyp.careerrecomendation.R;
+import com.fyp.careerrecomendation.utils.AppConstants;
 import com.fyp.careerrecomendation.utils.VolleyRequestsent;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.security.cert.X509Certificate;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 public class RegistrationFragment extends Fragment {
 View view;
 
 
-    String IsUserExist = "https://houseofsoftwares.com/color-blindness/Api.php?action=isUserExist";
+    String IsUserExist = "isUserExist";
     private ProgressDialog pDialog;
     EditText et_name_user, et_mobile_user, et_address_user, et_email_user, et_password_user, et_confirm_password_user;
     Button registration_btn_user;
-    String user_type = "2", user_name = "",user_phone="", user_email = "", user_mobile = "", user_address = "", user_password = "", user_confirm_password = "";
+    String user_type = "2", user_name = "",user_phone="", user_email = "", user_address = "", user_password = "", user_confirm_password = "";
 
     @Nullable
     @Override
@@ -52,6 +66,7 @@ View view;
         et_name_user = view.findViewById(R.id.user_name);
         et_email_user = view.findViewById(R.id.user_email);
         et_mobile_user = view.findViewById(R.id.user_mobile_number);
+        et_address_user = view.findViewById(R.id.user_address);
         et_password_user = view.findViewById(R.id.user_password);
         et_confirm_password_user = view.findViewById(R.id.user_confirm_password);
         registration_btn_user = view.findViewById(R.id.register_btn_buyer);
@@ -61,22 +76,11 @@ View view;
         registration_btn_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-                VerifyCodeFragment fragment = new VerifyCodeFragment();
-                Bundle args = new Bundle();
-                args.putString("Mobile", user_phone);
-                args.putString("Name", user_name);
-                args.putString("Address", user_address);
-                args.putString("Email", user_email);
-                args.putString("user_type", user_type);
-                args.putString("Password", user_password);
-                args.putString("code", "12345");
-                fragment.setArguments(args);
-                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container, fragment);
-                fragmentTransaction.commit();
-
+                if (validate()){
+                    IsUserExist(user_email);
+                }else {
+                    Toast.makeText(getContext(), "Try Again", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -88,7 +92,7 @@ View view;
         boolean valid = true;
         user_name = et_name_user.getText().toString();
         user_email = et_email_user.getText().toString();
-        user_mobile = et_mobile_user.getText().toString();
+        user_phone = et_mobile_user.getText().toString();
         user_address = et_address_user.getText().toString();
         user_password = et_password_user.getText().toString();
         user_confirm_password = et_confirm_password_user.getText().toString();
@@ -113,7 +117,7 @@ View view;
         } else {
             et_email_user.setError(null);
         }
-        if (user_mobile.isEmpty()) {
+        if (user_phone.isEmpty()) {
             et_mobile_user.setError("Please enter mobile");
             valid = false;
         } else {
@@ -143,10 +147,10 @@ View view;
 
 
     private void IsUserExist(final String user_email) {
-        Log.e("check1122", "mobile number" + user_email);
-        pDialog.setMessage("Registring ...");
+        Log.e("check1122", "email" + user_email);
+        pDialog.setMessage("Loading ...");
         pDialog.show();
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, IsUserExist, new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, AppConstants.mainurl+IsUserExist, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
@@ -162,7 +166,7 @@ View view;
                             //Toast.makeText(getContext(), "HELLO", Toast.LENGTH_SHORT).show();
                             VerifyCodeFragment fragment = new VerifyCodeFragment();
                             Bundle args = new Bundle();
-                            args.putString("Mobile", user_mobile);
+                            args.putString("Mobile", user_phone);
                             args.putString("Name", user_name);
                             args.putString("Address", user_address);
                             args.putString("Email", user_email);
@@ -200,7 +204,51 @@ View view;
             }
 
         };
+        checkAndHandleSSLHandshake(getActivity());
         VolleyRequestsent.getInstance().addRequestQueue(stringRequest);
+    }
+
+
+    /**
+     * By passing SSL
+     */
+    @SuppressLint("TrulyRandom")
+    private void bypassSSLValidation() {
+        try {
+            TrustManager[] trustAllCerts = new TrustManager[]{new X509TrustManager() {
+                public X509Certificate[] getAcceptedIssuers() {
+                    return new X509Certificate[0];
+                }
+
+                @Override
+                public void checkClientTrusted(X509Certificate[] certs, String authType) {
+                }
+
+                @Override
+                public void checkServerTrusted(X509Certificate[] certs, String authType) {
+                }
+            }};
+
+            SSLContext sc = SSLContext.getInstance("SSL");
+            sc.init(null, trustAllCerts, new SecureRandom());
+            HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+            HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
+                @Override
+                public boolean verify(String arg0, SSLSession arg1) {
+                    return true;
+                }
+            });
+        } catch (NoSuchAlgorithmException | KeyManagementException ex ) {
+            ex.printStackTrace();
+        } catch(Exception ex){
+            ex.printStackTrace();
+        }
+    }
+
+    private void checkAndHandleSSLHandshake(Activity activity){
+
+        bypassSSLValidation();
+
     }
 
 }

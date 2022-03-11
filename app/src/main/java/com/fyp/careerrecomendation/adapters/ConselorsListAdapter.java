@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -36,50 +37,34 @@ public class ConselorsListAdapter extends RecyclerView.Adapter<ConselorsListAdap
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
-   /*     holder.dr_email.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + "123456"));
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "ColorBlindness issue");
-                context.startActivity(Intent.createChooser(emailIntent, "Chooser Title"));
-            }
+        final UserModelClass modelClass=modelList.get(position);
+        holder.tv_name.setText(modelClass.getUser_name());
+        holder.tv_qualification.setText(modelClass.getQualification());
+        holder.tv_office_address.setText(modelClass.getBusniss_address());
+        holder.tv_bio.setText(modelClass.getCounselor_bio());
+        holder.btn_call.setOnClickListener(view -> {
+            Intent intentDial = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + modelClass.getUser_mobile()));
+            context.startActivity(intentDial);
         });
-
-        holder.dr_mobile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentDial = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + "123456"));
-                context.startActivity(intentDial);
-            }
-        });
-        holder.dr_whatsapp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openWhatsApp("123456");
-            }
-        });*/
     }
 
     @Override
     public int getItemCount() {
-        return 10;
+        return modelList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView dr_name,dr_spec,dr_address,dr_email,dr_mobile,dr_whatsapp;
-
+        TextView tv_name,tv_qualification,tv_office_address,tv_bio;
+        Button btn_call;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            dr_name=itemView.findViewById(R.id.consultant_name);
-            dr_spec=itemView.findViewById(R.id.txt_study);
+            tv_name=itemView.findViewById(R.id.consultant_name);
+            tv_bio=itemView.findViewById(R.id.txt_bio);
+            tv_office_address=itemView.findViewById(R.id.txt_address);
+            tv_qualification=itemView.findViewById(R.id.txt_study);
+            btn_call=itemView.findViewById(R.id.btn_call);
 
         }
     }
 
-    private void openWhatsApp(String number) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+"+92"+number + "&text="+"hello"));
-        context.startActivity(intent);
-    }
 }

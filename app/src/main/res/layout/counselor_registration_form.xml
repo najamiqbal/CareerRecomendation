@@ -7,7 +7,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFF"
-        android:layout_gravity="center_vertical"
         android:padding="10dp">
 
 
@@ -30,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="20dp"
-           android:layout_below="@id/iv_profile_photo_buyer"
+            android:layout_below="@id/iv_profile_photo_buyer"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
 
@@ -38,7 +37,7 @@
                 android:id="@+id/user_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="full Name"
+                android:hint="Full Name"
                 android:padding="10dp"
                 android:fontFamily="@font/lato_regular"
                 android:background="@drawable/edit_text_style"
@@ -102,6 +101,56 @@
                 android:inputType="textEmailAddress"
                 android:textColorHint="@color/hint_text"
                 />
+            <EditText
+                android:id="@+id/user_qualification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Qualification"
+                android:padding="10dp"
+                android:fontFamily="@font/lato_regular"
+                android:background="@drawable/edit_text_style"
+                android:drawableLeft="@drawable/ic_home"
+                android:drawablePadding="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/hint_text"
+                />
+            <EditText
+                android:id="@+id/user_office_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Business Address"
+                android:padding="10dp"
+                android:fontFamily="@font/lato_regular"
+                android:background="@drawable/edit_text_style"
+                android:drawableLeft="@drawable/ic_home"
+                android:drawablePadding="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/hint_text"
+                />
+            <EditText
+                android:id="@+id/user_bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView3"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/comentboxstyle"
+                android:gravity="top|start"
+                android:hint="Write your introduction"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:fontFamily="@font/lato_regular"
+                android:overScrollMode="always"
+                android:padding="6dp"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
                 android:id="@+id/user_password"
@@ -136,7 +185,7 @@
 
 
             <Button
-                android:id="@+id/register_btn_buyer"
+                android:id="@+id/register_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_style"

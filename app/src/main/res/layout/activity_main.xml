@@ -22,5 +22,22 @@
         android:fitsSystemWindows="true"
         app:itemIconTint="@color/colorPrimary"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        app:menu="@menu/activity_main_drawer">
+
+
+
+            <TextView
+                android:id="@+id/become_conselor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/lato_bold"
+                android:layout_gravity="bottom"
+                android:text="Became a Counselor" />
+
+
+    </com.google.android.material.navigation.NavigationView>
+
 </androidx.drawerlayout.widget.DrawerLayout>

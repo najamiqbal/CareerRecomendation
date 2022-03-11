@@ -1,7 +1,7 @@
 package com.fyp.careerrecomendation.utils;
 
 public class AppConstants {
-
+    public  static String mainurl="https://devapis.tk/career-recommendation/Api.php?action=";
     public static String contactUs=" <h3><b>Career Recomendation App</b>\n" +
             "        </h3>\n" +
             "        <p>" +
