@@ -41,7 +41,11 @@ public class UserHomeFragment extends Fragment implements View.OnClickListener{
 
             case R.id.carreer_detect_cardview:
 
-
+                CareerRecomendationFragment careerRecomendationFragment = new CareerRecomendationFragment();
+                FragmentTransaction fragmentTransaction1 = getFragmentManager().beginTransaction();
+                fragmentTransaction1.replace(R.id.user_main_frame, careerRecomendationFragment);
+                fragmentTransaction1.addToBackStack("fragment");
+                fragmentTransaction1.commit();
                 break;
             case R.id.conelors_cardview:
                 ConselorsListFragment conselorsListFragment = new ConselorsListFragment();
@@ -54,7 +58,7 @@ public class UserHomeFragment extends Fragment implements View.OnClickListener{
                 UniInfoDeskFragment fragment = new UniInfoDeskFragment();
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.user_main_frame, fragment);
-                fragmentTransaction.addToBackStack("forgetpass_fragment");
+                fragmentTransaction.addToBackStack("fragment");
                 fragmentTransaction.commit();
                 break;
 

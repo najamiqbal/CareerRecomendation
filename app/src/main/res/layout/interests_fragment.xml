@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <LinearLayout
+        android:id="@+id/top_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/paper"
+        android:elevation="6dp"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_margin="8dp"
+            android:text="Tags" />
+
+        <com.doodle.android.chips.ChipsView
+            android:id="@+id/cv_tags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:cv_bg_color="#899"
+            app:cv_bg_color_indelible="#99dde1e4"
+            app:cv_chips_margin="2dp"
+            app:cv_icon_placeholder="@drawable/ic_baseline_star_half_24"
+            app:cv_icon_placeholder_tint="#06f"
+            app:cv_max_height="120dp"
+            app:cv_text_color_indelible="#888"
+            app:cv_text_hint="This is the hint text"
+            app:cv_vertical_spacing="2dp" />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_tags"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_tags" />
+
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_style"
+        android:text="Submit"
+        android:textColor="#FFF" />
+</RelativeLayout>

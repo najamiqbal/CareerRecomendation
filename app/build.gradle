@@ -51,5 +51,8 @@ dependencies {
     //img views -------------------------------------------
     implementation 'de.hdodenhof:circleimageview:3.0.1'
     implementation 'com.makeramen:roundedimageview:2.3.0'
-    implementation 'com.squareup.picasso:picasso:2.71828'
+    //implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.doodle.android:android-material-chips:1.2.0'
+
 }

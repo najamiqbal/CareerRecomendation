@@ -22,8 +22,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.fyp.careerrecomendation.R;
+import com.fyp.careerrecomendation.adapters.ConselorsListAdapter;
 import com.fyp.careerrecomendation.adapters.DepartmentsListAdapter;
 import com.fyp.careerrecomendation.models.DepartmentsModel;
+import com.fyp.careerrecomendation.models.UserModelClass;
+import com.fyp.careerrecomendation.utils.AppConstants;
 import com.fyp.careerrecomendation.utils.VolleyRequestsent;
 
 import org.json.JSONArray;
@@ -53,10 +56,10 @@ public class DepartmentsListFragment extends Fragment {
     List<DepartmentsModel> ItemList;
     private ProgressDialog pDialog;
     DepartmentsListAdapter mAdapter;
-    // define the default variables for proper certificate validation
-    private static final SSLSocketFactory defaultSSLSocketFactory = HttpsURLConnection.getDefaultSSLSocketFactory();
-    private static final HostnameVerifier defaultSSLHostnameVerifier = HttpsURLConnection.getDefaultHostnameVerifier();
-    String getDepartmentsUrl = "https://devapis.tk/career-recommendation/Api.php?action=getDepartments";
+    String total,metric_with,inter_with,eligibility,interests;
+
+    String getDepartmentsUrl = "getDepartments";
+    String getRecomendationUrl = "getSuggestions";
 
     @Nullable
     @Override
@@ -73,9 +76,81 @@ public class DepartmentsListFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         ItemList = new ArrayList<>();
         info_recyclerView.setLayoutManager(linearLayoutManager);
-        GetDepartments();
+
+        if (getArguments() != null) {
+
+            eligibility = getArguments().getString("eligibility");
+            total = getArguments().getString("total_marks");
+            metric_with = getArguments().getString("metric_with");
+            inter_with = getArguments().getString("inter_with");
+            interests = getArguments().getString("interests");
+
+            Log.d("VerifyData","user Data  "+eligibility+total+metric_with+inter_with+"      =====>"+interests);
+            GetRecomendedDepartments(eligibility,metric_with,inter_with,interests,total);
+
+        }else {
+            GetDepartments();
+        }
     }
 
+    private void GetRecomendedDepartments(String eligibility, String metric_with, String inter_with, String interests, String total) {
+        pDialog.setMessage("Loading...");
+        pDialog.show();
+       // ItemList.clear();
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConstants.mainurl + getRecomendationUrl, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Log.d("Response is", response.toString());
+                try {
+                    JSONArray jsonArray = new JSONArray(response);
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject jsonObject = (JSONObject) jsonArray.get(i);
+                        Log.d("status", "CHECK" + jsonObject.getString("name"));
+
+                        DepartmentsModel model=new DepartmentsModel();
+                        model.setId(jsonObject.getString("department_id"));
+                        model.setPoint_name(jsonObject.getString("name"));
+                        model.setDes(jsonObject.getString("description"));
+                        ItemList.add(model);
+
+                    }
+                    pDialog.dismiss();
+                    if (ItemList != null) {
+                        mAdapter = new DepartmentsListAdapter(getContext(), ItemList);
+                        info_recyclerView.setAdapter(mAdapter);
+                    } else {
+                        Toast.makeText(getContext(), "NO DATA", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    pDialog.dismiss();
+                    e.printStackTrace();
+                    Toast.makeText(getContext(), "error" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                pDialog.dismiss();
+                Toast.makeText(getContext(), "Some Error", Toast.LENGTH_SHORT).show();
+
+
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("eligibility", eligibility);
+                params.put("interests", interests);
+                params.put("matricWith", metric_with);
+                params.put("interWith", inter_with);
+                params.put("minAggregate", total);
+                return params;
+
+            }
+        };
+        VolleyRequestsent.getInstance().addRequestQueue(stringRequest);
+    }
 
 
     private void GetDepartments() {
@@ -83,7 +158,7 @@ public class DepartmentsListFragment extends Fragment {
         pDialog.show();
         ItemList.clear();
         Log.d("Response is", "CHECK RESPONSE"+getDepartmentsUrl+" ");
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, getDepartmentsUrl, new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, AppConstants.mainurl +getDepartmentsUrl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.d("Response is", "CHECK RESPONSE"+response.toString());
@@ -122,54 +197,7 @@ public class DepartmentsListFragment extends Fragment {
 
             }
         });
-        checkAndHandleSSLHandshake(getActivity());
         VolleyRequestsent.getInstance().addRequestQueue(stringRequest);
     }
 
-    private void setDefaultSettingsForHttpsConnection(){
-        HttpsURLConnection.setDefaultSSLSocketFactory(defaultSSLSocketFactory);
-        HttpsURLConnection.setDefaultHostnameVerifier(defaultSSLHostnameVerifier);
-    }
-
-    /**
-     * By passing SSL
-     */
-    @SuppressLint("TrulyRandom")
-    private void bypassSSLValidation() {
-        try {
-            TrustManager[] trustAllCerts = new TrustManager[]{new X509TrustManager() {
-                public X509Certificate[] getAcceptedIssuers() {
-                    return new X509Certificate[0];
-                }
-
-                @Override
-                public void checkClientTrusted(X509Certificate[] certs, String authType) {
-                }
-
-                @Override
-                public void checkServerTrusted(X509Certificate[] certs, String authType) {
-                }
-            }};
-
-            SSLContext sc = SSLContext.getInstance("SSL");
-            sc.init(null, trustAllCerts, new SecureRandom());
-            HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
-            HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
-                @Override
-                public boolean verify(String arg0, SSLSession arg1) {
-                    return true;
-                }
-            });
-        } catch (NoSuchAlgorithmException | KeyManagementException ex ) {
-            ex.printStackTrace();
-        } catch(Exception ex){
-            ex.printStackTrace();
-        }
-    }
-
-    private void checkAndHandleSSLHandshake(Activity activity){
-
-            bypassSSLValidation();
-
-    }
 }

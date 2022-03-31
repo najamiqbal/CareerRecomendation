@@ -40,6 +40,7 @@ public class DepartmentsListAdapter extends RecyclerView.Adapter<DepartmentsList
         final DepartmentsModel model=modelList.get(position);
         holder.tv_department.setText(model.getPoint_name());
         holder.tv_department.setOnClickListener(view -> {
+
             FragmentManager manager = ((AppCompatActivity)
                     context).getSupportFragmentManager();
             DetailViewFragment DetailFragment=new DetailViewFragment();
