@@ -37,22 +37,23 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InterestsTagsFragment extends Fragment {
+public class SoftSkillsTagsfragment extends Fragment {
     View view;
-    String total,metric_with,inter_with,metric_marks,inter_marks,eligibility;
+    String total, metric_with, inter_with, interests, inter_marks, eligibility;
     Button submit_btn;
     private RecyclerView mTags;
-    private TagsAdapter mTagsAdapter;
+    private SoftSkillsTagsfragment.TagsAdapter mTagsAdapter;
     private ChipsView mChipsView;
-    List<String> temmArray=new ArrayList<>();
-    String tagsUrl = "https://devapis.tk/career-recommendation/Api.php?action=getInterests";
+    List<String> temmArray = new ArrayList<>();
+    String tagsUrl = "https://devapis.tk/career-recommendation/Api.php?action=getSoftskills";
 
     ArrayList<TagsModel> item1 = new ArrayList<>();
     int counter = 0;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.interests_fragment, container, false);
+        view = inflater.inflate(R.layout.soft_skills_screen, container, false);
         initialization();
         return view;
     }
@@ -60,11 +61,11 @@ public class InterestsTagsFragment extends Fragment {
     private void initialization() {
         if (getArguments() != null) {
 
-
             eligibility = getArguments().getString("eligibility");
-            total = getArguments().getString("total");
-            metric_with = getArguments().getString("metric");
-            inter_with = getArguments().getString("inter");
+            total = getArguments().getString("total_marks");
+            metric_with = getArguments().getString("metric_with");
+            inter_with = getArguments().getString("inter_with");
+            interests = getArguments().getString("interests");
 
             Log.d("VerifyData","user Data  "+eligibility+total+metric_with+inter_with);
 
@@ -78,13 +79,14 @@ public class InterestsTagsFragment extends Fragment {
                     ret += temmArray.get(i) + ",";
                 }
 
-                SoftSkillsTagsfragment fragment = new SoftSkillsTagsfragment();
+                DepartmentsListFragment fragment = new DepartmentsListFragment();
                 Bundle args = new Bundle();
                 args.putString("total_marks", total);
                 args.putString("eligibility", eligibility);
                 args.putString("metric_with", metric_with);
                 args.putString("inter_with", inter_with);
-                args.putString("interests", ret);
+                args.putString("interests", interests);
+                args.putString("softskills", ret);
                 fragment.setArguments(args);
                 FragmentTransaction fragmentTransaction1 = getFragmentManager().beginTransaction();
                 fragmentTransaction1.replace(R.id.user_main_frame, fragment);
@@ -146,9 +148,7 @@ public class InterestsTagsFragment extends Fragment {
             }
         });
 
-
     }
-
     private void GetTagsData() {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, tagsUrl, new Response.Listener<String>() {
             @Override
@@ -168,7 +168,7 @@ public class InterestsTagsFragment extends Fragment {
 
                     }
                     if (item1 != null) {
-                        mTagsAdapter = new TagsAdapter(item1);
+                        mTagsAdapter = new SoftSkillsTagsfragment.TagsAdapter(item1);
                         mTags.setAdapter(mTagsAdapter);
                     } else {
                         Toast.makeText(getContext(), "NO DATA", Toast.LENGTH_SHORT).show();
@@ -197,7 +197,7 @@ public class InterestsTagsFragment extends Fragment {
 
     //Adapter Class start from here
 
-    public class TagsAdapter extends RecyclerView.Adapter<TagsAdapter.CheckableContactViewHolder> {
+    public class TagsAdapter extends RecyclerView.Adapter<SoftSkillsTagsfragment.TagsAdapter.CheckableContactViewHolder> {
 
         private String[] data = new String[]{
                 "poor appetite",
@@ -220,13 +220,13 @@ public class InterestsTagsFragment extends Fragment {
         }
 
         @Override
-        public CheckableContactViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public SoftSkillsTagsfragment.TagsAdapter.CheckableContactViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View itemView = LayoutInflater.from(getContext()).inflate(R.layout.item_checkable_tags, parent, false);
-            return new CheckableContactViewHolder(itemView);
+            return new SoftSkillsTagsfragment.TagsAdapter.CheckableContactViewHolder(itemView);
         }
 
         @Override
-        public void onBindViewHolder(CheckableContactViewHolder holder, int position) {
+        public void onBindViewHolder(SoftSkillsTagsfragment.TagsAdapter.CheckableContactViewHolder holder, int position) {
             final TagsModel model = Items.get(position);
             Log.d("Adapter", "NAME IS " + model.getName());
             holder.name.setText(model.getName());
@@ -342,9 +342,11 @@ public class InterestsTagsFragment extends Fragment {
         }
     }
 
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        getActivity().setTitle("Your Interests");
+        getActivity().setTitle("Your SoftSkills");
         super.onViewCreated(view, savedInstanceState);
     }
+
 }

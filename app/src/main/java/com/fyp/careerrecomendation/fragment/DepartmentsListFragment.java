@@ -56,7 +56,7 @@ public class DepartmentsListFragment extends Fragment {
     List<DepartmentsModel> ItemList;
     private ProgressDialog pDialog;
     DepartmentsListAdapter mAdapter;
-    String total,metric_with,inter_with,eligibility,interests;
+    String total,metric_with,inter_with,eligibility,interests,softskills;
 
     String getDepartmentsUrl = "getDepartments";
     String getRecomendationUrl = "getSuggestions";
@@ -84,35 +84,40 @@ public class DepartmentsListFragment extends Fragment {
             metric_with = getArguments().getString("metric_with");
             inter_with = getArguments().getString("inter_with");
             interests = getArguments().getString("interests");
+            softskills = getArguments().getString("softskills");
 
             Log.d("VerifyData","user Data  "+eligibility+total+metric_with+inter_with+"      =====>"+interests);
-            GetRecomendedDepartments(eligibility,metric_with,inter_with,interests,total);
+            GetRecomendedDepartments(eligibility,metric_with,inter_with,interests,total,softskills);
 
         }else {
             GetDepartments();
         }
     }
 
-    private void GetRecomendedDepartments(String eligibility, String metric_with, String inter_with, String interests, String total) {
+    private void GetRecomendedDepartments(String eligibility, String metric_with, String inter_with, String interests, String total,String softskills) {
         pDialog.setMessage("Loading...");
         pDialog.show();
        // ItemList.clear();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConstants.mainurl + getRecomendationUrl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.d("Response is", response.toString());
+                Log.d("Response is ==> ", response.toString());
                 try {
                     JSONArray jsonArray = new JSONArray(response);
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = (JSONObject) jsonArray.get(i);
                         Log.d("status", "CHECK" + jsonObject.getString("name"));
 
-                        DepartmentsModel model=new DepartmentsModel();
-                        model.setId(jsonObject.getString("department_id"));
-                        model.setPoint_name(jsonObject.getString("name"));
-                        model.setDes(jsonObject.getString("description"));
-                        ItemList.add(model);
+                        if (jsonObject.getString("status").equals("false")) {
+                            Toast.makeText(getContext(), ""+jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
 
+                        }else {
+                            DepartmentsModel model = new DepartmentsModel();
+                            model.setId(jsonObject.getString("department_id"));
+                            model.setPoint_name(jsonObject.getString("name"));
+                            model.setDes(jsonObject.getString("description"));
+                            ItemList.add(model);
+                        }
                     }
                     pDialog.dismiss();
                     if (ItemList != null) {
@@ -145,6 +150,7 @@ public class DepartmentsListFragment extends Fragment {
                 params.put("matricWith", metric_with);
                 params.put("interWith", inter_with);
                 params.put("minAggregate", total);
+                params.put("softskills", softskills);
                 return params;
 
             }
