@@ -46,14 +46,14 @@ public class DetailViewFragment extends Fragment {
             //tv_info.setText(Html.fromHtml(AppConstants.internship));
             tv_info.getSettings().setJavaScriptEnabled(true);
             tv_info.loadDataWithBaseURL(null, AppConstants.internship, "text/html", "utf-8", null);
-        }else if (point.equals("fee_policy")){
+        }else if (point.equals("short_course")){
           //  tv_info.setText(Html.fromHtml(AppConstants.fee_policy));
             tv_info.getSettings().setJavaScriptEnabled(true);
-            tv_info.loadDataWithBaseURL(null, AppConstants.fee_policy, "text/html", "utf-8", null);
-        }else if (point.equals("rules")){
+            tv_info.loadDataWithBaseURL(null, AppConstants.short_course, "text/html", "utf-8", null);
+        }else if (point.equals("scholarship")){
           //  tv_info.setText(Html.fromHtml(AppConstants.rules));
             tv_info.getSettings().setJavaScriptEnabled(true);
-            tv_info.loadDataWithBaseURL(null, AppConstants.rules, "text/html", "utf-8", null);
+            tv_info.loadDataWithBaseURL(null, AppConstants.scholarship, "text/html", "utf-8", null);
         }else {
            // tv_info.setText(Html.fromHtml(point));
             tv_info.getSettings().setJavaScriptEnabled(true);

@@ -85,6 +85,21 @@
                 android:textColorHint="@color/hint_text"
                 />
             <EditText
+                android:id="@+id/user_address_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Address"
+                android:padding="10dp"
+                android:background="@drawable/edit_text_style"
+                android:drawableLeft="@drawable/ic_home"
+                android:drawablePadding="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/hint_text"
+                />
+            <EditText
                 android:id="@+id/user_password_edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

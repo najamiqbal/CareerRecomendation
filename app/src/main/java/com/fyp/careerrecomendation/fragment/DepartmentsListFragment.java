@@ -106,12 +106,12 @@ public class DepartmentsListFragment extends Fragment {
                     JSONArray jsonArray = new JSONArray(response);
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = (JSONObject) jsonArray.get(i);
-                        Log.d("status", "CHECK" + jsonObject.getString("name"));
+                       // Log.d("status", "CHECK" + jsonObject.getString("name"));
 
                         if (jsonObject.getString("status").equals("false")) {
                             Toast.makeText(getContext(), ""+jsonObject.getString("message"), Toast.LENGTH_SHORT).show();
-
-                        }else {
+                        }
+                        else {
                             DepartmentsModel model = new DepartmentsModel();
                             model.setId(jsonObject.getString("department_id"));
                             model.setPoint_name(jsonObject.getString("name"));

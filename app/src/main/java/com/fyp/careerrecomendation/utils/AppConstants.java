@@ -244,6 +244,398 @@ public class AppConstants {
             "<p>      i.\tOrientation Campaign for admission of intermediate (July 27 &#038; 28, 2016)<br />\n" +
             "      ii.\tOrientation Campaign for admission in BS, MA/MSc, MS and Ph.D (September 20 &#038; 22, 2016)</p>\n" +
             "</p>";
-    public static String fee_policy="";
-    public static String rules="";
+    public static String short_course="<P class=\"head1\">DURATION</P>\n" +
+            "<P style=\"TEXT-ALIGN: justify;\" class=\"txt\">Each Certificate Course comprised of one semester duration (18 weeks).</P>\n" +
+            "<P class=\"head1\">ELIGIBILITY REQUIREMENTS</P>\n" +
+            "<P style=\"TEXT-ALIGN: justify;\" class=\"txt\">Candidate can read, write and understand English language and there is no restriction on age, sex and educational qualifications. Candidate can apply for admission to maximum four (04) courses during a semester. However, students already enrolled in a Virtual University degree/diploma program are ineligible for admission towards certificate course(s).</P>\n" +
+            "\n" +
+            "<P class=\"head1\">EDUCATIONAL MATERIAL</P>\n" +
+            "<P style=\"TEXT-ALIGN: justify;\" class=\"txt\">The University mail a package comprised of Lecture Handout/DVD’s of only those course(s) that developed by the University. In case of non-availability of study material of a course(s), student will consult recommended books/material as prescribed in course(s) catalogue/LMS and will not claim for Lecture Handouts/DVDs.</P>\n" +
+            "<P style=\"TEXT-ALIGN: justify;\" class=\"txt\">However, a student is allowed to change his/her enrolled certificate course within fifteen days after the commencement of semester by providing  application (signed hard copy ) to Registrar, Virtual University of Pakistan, M.A Jinnah Campus, Defence Road, Off Raiwind Road, Lahore, Pakistan or at (<a href=\"mailto:certificateadmissions@vu.edu.pk\">certificateadmissions@vu.edu.pk</a>). Such student is required to replace the received package (if already received) by mailing Lecture Handouts & Lecture DVD’s of the course along with payment of Rs.100/- as shipment charges to VU Bookshop (<a href=\"mailto:bookshop@vu.edu.pk\">bookshop@vu.edu.pk</a>) in order to receive new opted course material. However, overseas students are required to pay actual additional shipment charges for newly opted course.</P>\n" +
+            "\n" +
+            "\n" +
+            "<p class=\"head1\">ASSESSMENT OF STUDY PROGRESS</p>\n" +
+            "<P style=\"TEXT-ALIGN: justify;\" class=\"txt\">The students&#8217; study progress evaluation mechanism is based on continuous assessment throughout the semester by giving assignments, online quizzes, Graded Moderated Discussion Boards (GMDBs), mid-term and final term examinations.</P>\n" +
+            "<P class=\"head1\">AWARD OF CERTIFICATE</P>\n" +
+            "<P style=\"TEXT-ALIGN: justify;\" class=\"txt\">Each Certificate Course is of three credit hours (except Islamic Studies and Pakistan Studies). The earned course credit hours are transferable towards degree/diploma program of the University. Course Certificate would be awarded by VU Academic Department (<span class=\"txt\"><a href=\"mailto:professional_certificate@vu.edu.pk\" target=\"_self\">professional_certificate@vu.edu.pk</a></span>) to the candidate after successful completion of course work requirements.</P>\n" +
+            "<p class=\"head1\">Fee Structure</p>\n" +
+            "<p class=\"txt\"><a href=\"/FeeStructure.aspx\" target=\"_self\">Click here&nbsp; to View Fee Structure</a></p>\n" +
+            "<P style=\"TEXT-ALIGN: justify;\" class=\"txt\"><span class=\"label\">Note:</span>&nbsp;In case a student leaves the university or apply for admission cancellation then university shall not refund any paid amount. However, fee to drop/freeze certificate courses is as under:</P>\n" +
+            "<P class=\"head1\">CERTIFICATE COURSES</P>\n" +
+            "<P style=\"TEXT-ALIGN: justify;\" class=\"txt\">The University is offering Certificate Course(s) from the following categories: </P>\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "    \n" +
+            "       <table width=\"90%\" border=\"0\" cellspacing=\"2\" cellpadding=\"1\">\n" +
+            "          \n" +
+            "         <tr>\n" +
+            "            <td class=\"txt\" colspan=\"2\">\n" +
+            "                \n" +
+            "                 \n" +
+            "\t\t\t\t\n" +
+            "                   <ol type=\"1\">\n" +
+            "                                \n" +
+            "                   <li>Accounting,Banking&Finance</li> \n" +
+            "                              \n" +
+            "                   <li>ComputerScience/InformationTechnology</li> \n" +
+            "                              \n" +
+            "                   <li>Economics</li> \n" +
+            "                              \n" +
+            "                   <li>English</li> \n" +
+            "                              \n" +
+            "                   <li>HumanitiesDistribution</li> \n" +
+            "                              \n" +
+            "                   <li>Law</li> \n" +
+            "                              \n" +
+            "                   <li>Management</li> \n" +
+            "                              \n" +
+            "                   <li>Marketing</li> \n" +
+            "                              \n" +
+            "                   <li>MassCommunication</li> \n" +
+            "                              \n" +
+            "                   <li>Mathematics</li> \n" +
+            "                              \n" +
+            "                   <li>Physics</li> \n" +
+            "                              \n" +
+            "                   <li>Probability&Statistics</li> \n" +
+            "                              \n" +
+            "                   <li>Psychology</li> \n" +
+            "                              \n" +
+            "                   <li>Sociology</li> \n" +
+            "                   \n" +
+            "                </ol>\n" +
+            "                               \n" +
+            "               </td>\n" +
+            "        </tr>\n" +
+            "        <tr>\n" +
+            "            <td colspan=\"2\">\n" +
+            "                \n" +
+            "                \n" +
+            "            </td>\n" +
+            "        </tr>\n" +
+            "        <tr>\n" +
+            "            <td colspan=\"2\">\n" +
+            "                \n" +
+            "               </td>\n" +
+            "        </tr>\n" +
+            "        <tr>\n" +
+            "            <td colspan=\"2\" >\n" +
+            "             \n" +
+            "            <span class=\"head2\">1.&nbsp;&nbsp;Accounting, Banking & Finance</span>\n" +
+            "            </td>\n" +
+            "        </tr>\n" +
+            "        <tr>\n" +
+            "            <td  colspan=\"2\">\n" +
+            "                         \n" +
+            "                <table class=\"txt\" cellpadding=\"0\" cellspacing=\"0\" width=\"95%\"  >\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                           \n" +
+            "                            1\n" +
+            "                        \n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                           ACC311</td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Fundamentals of Auditing</td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            2\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            ACC501\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Business Finance\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            3\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            BNK601\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Banking Laws & Practices\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            4\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            BNK603\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Consumer Banking\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            5\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            FIN611\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Advanced Financial Accounting\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            6\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            FIN621\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Financial Statement Analysis\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            7\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            FIN622\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Corporate Finance\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            8\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            FIN623\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Taxation Management\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            9\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            FIN625\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Credit & Risk Management\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            10\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            FIN630\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Investment Analysis & Portfolio Management\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            11\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            MGT101\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Financial Accounting\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            12\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            MGT201\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Financial Management\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            13\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            MGT401\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Financial Accounting II\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            14\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            MGT402\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Cost & Management Accounting\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            15\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            MGT404\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Managerial Accounting\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            16\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            MGT411\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Money & Banking\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"5%\">\n" +
+            "                            17\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftmiddle\" width=\"20%\">\n" +
+            "                            MGT604\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightmiddle\" width=\"75%\">\n" +
+            "                            Management of Financial Institutions (alt. code=BNK604)\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "                    <tr>\n" +
+            "                        <td class=\"tbltdleftbottom\" width=\"5%\">\n" +
+            "                          \n" +
+            "                              18\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdleftbottom\" width=\"20%\">\n" +
+            "                            MGT605\n" +
+            "                        </td>\n" +
+            "                        <td class=\"tbltdrightbottom\" width=\"75%\">\n" +
+            "                            Advanced Cost and Management Accounting\n" +
+            "                        </td>\n" +
+            "                    </tr>\n" +
+            "                    \n" +
+            "               </td>\n" +
+            "        </tr>\n" +
+            "        <tr>\n" +
+            "            <td colspan=\"2\" >\n" +
+            "             \n" +
+            "               </table>\n" +
+            "                <br />      ";
+    public static String scholarship="<h4 class=\"widget-title\">OUR SCHOLARSHIP PROGRAMS</h4>\n" +
+            "</div>\n" +
+            "<table class=\"table\">\n" +
+            "<tbody>\n" +
+            "<tr>\n" +
+            "<td width=\"32\"><strong>Sr.</strong></td>\n" +
+            "<td width=\"154\"><strong>Types</strong></td>\n" +
+            "<td width=\"436\"><strong>Detail</strong></td>\n" +
+            "</tr>\n" +
+            "<tr>\n" +
+            "<td width=\"32\"><strong>1</strong></td>\n" +
+            "<td width=\"154\"><strong>Ehsaas Undergraduate Scholarship Program</strong></td>\n" +
+            "<td width=\"436\">\n" +
+            "<ul>\n" +
+            " \t<li>It is a paradigm shift in a policy of the Government of Pakistan to support undergraduate level students who after completing FA/FSc./Intermediate are unable to pursue university education due to limited financial resources. Unlike past financial assistance schemes that were aimed at MS or PhD programs, the Ehsaas Undergraduate Scholarship Project focuses on the most critical segment, namely the 4-5 year undergraduate programs, which contributes the most to income of the individual who completes the bachelor’s degree.&nbsp;Scholarship covers university tuition fee and stipend throughout four-five years of degree duration. It is a significant step to ensure affordable higher education in all major fields of education including agriculture, arts and humanities, business education, engineering, medical, physical sciences, and social sciences.</li>\n" +
+            "</ul>\n" +
+            "The Program covers funds for the following expenses:\n" +
+            "<ul>\n" +
+            " \t<li>University fee as per actual&nbsp;fee (other than security fee, transport charges and hostel fee)</li>\n" +
+            " \t<li>Annual Stipend Rs. 40,000/-</li>\n" +
+            "</ul>\n" +
+            "For more details, please see website&nbsp;<a href=\"https://www.hec.gov.pk/english/services/students/Ehsaas/Pages/default.aspx\" data-saferedirecturl=\"https://www.google.com/url?q=https://www.hec.gov.pk/english/services/students/Ehsaas/Pages/default.aspx&amp;source=gmail&amp;ust=1630125985571000&amp;usg=AFQjCNFDkoBJB7Aq0m3hKtrL9_nrj1mrYw\">https://www.hec.gov.pk/english/services/students/Ehsaas/Pages/default.aspx</a>&nbsp;or visit Financial Aid Office of GCWUS</td>\n" +
+            "</tr>\n" +
+            "<tr>\n" +
+            "<td width=\"32\"><strong>2</strong></td>\n" +
+            "<td width=\"154\"><strong>HEC Need Base</strong>\n" +
+            "\n" +
+            "<strong>Scholarship</strong></td>\n" +
+            "<td width=\"436\">Financial assistance &amp;&nbsp;scholarships&nbsp;are available for study at undergraduate level in all disciplines at the selected public sector Pakistani universities and degree awarding institutions by the HEC.&nbsp;This Scholarship is&nbsp;provided as per requirements of HEC.\n" +
+            "\n" +
+            "For more details see website&nbsp;<a href=\"https://www.hec.gov.pk/english/scholarshipsgrants/NBS/Pages/Eligibility-Criteria.aspx\" data-saferedirecturl=\"https://www.google.com/url?q=https://www.hec.gov.pk/english/scholarshipsgrants/NBS/Pages/Eligibility-Criteria.aspx&amp;source=gmail&amp;ust=1630125985571000&amp;usg=AFQjCNHl_K7XfNI2ZA1P9L97t1g_O4_4sw\">https://www.hec.gov.pk/english/scholarshipsgrants/NBS/Pages/Eligibility-Criteria.aspx</a>&nbsp;or visit Financial Aid Office of GCWUS</td>\n" +
+            "</tr>\n" +
+            "<tr>\n" +
+            "<td width=\"32\"><strong>3</strong></td>\n" +
+            "<td width=\"154\"><strong>Punjab Educational Endowment Fund (PEEF)</strong></td>\n" +
+            "<td width=\"436\">The Punjab Educational Endowment Fund (PEEF) is an initiative of the Govt. of Punjab. It is established with the objective of providing Scholarships to talented and needy students. It provided as per need &amp; merit by Govt. of Punjab once in a semester to Inter, Graduate and Master level students. These Scholarships are disbursed through head of the institutions where the students are currently enrolled.\n" +
+            "\n" +
+            "For more details see website&nbsp;<a href=\"https://peef.org.pk/peef-scholarships\" data-saferedirecturl=\"https://www.google.com/url?q=https://peef.org.pk/peef-scholarships&amp;source=gmail&amp;ust=1630125985571000&amp;usg=AFQjCNHsaVvpQuRIIItEOsF1qc_JSmooRA\">https://peef.org.pk/peef-scholarships</a>&nbsp;or visit Financial Aid Office of GCWUS</td>\n" +
+            "</tr>\n" +
+            "<tr>\n" +
+            "<td width=\"32\"><strong>4</strong></td>\n" +
+            "<td width=\"154\"><strong>MORA</strong></td>\n" +
+            "<td width=\"436\">Ministry of Religious Affairs (MORA) has initiated financial assistance to the needy students from its Zakat Fund which is called the&nbsp;Mora&nbsp;Zakat&nbsp;Scholarship. The purpose of this&nbsp;scholarship&nbsp;is to bear the study expenses of poor Muslim students who can&#8217;t continue their studies due to low financial conditions.&nbsp;This Scholarship is provided to students once in a year.\n" +
+            "\n" +
+            "For more details see website&nbsp;<a href=\"https://scholarshipstory.com/mora-scholarship/\" data-saferedirecturl=\"https://www.google.com/url?q=https://scholarshipstory.com/mora-scholarship/&amp;source=gmail&amp;ust=1630125985571000&amp;usg=AFQjCNEsUAnR4TL5v15gw8sAavXi6VIrQg\">https://scholarshipstory.com/mora-scholarship/</a>&nbsp;or visit Financial Aid Office of GCWUS</td>\n" +
+            "</tr>\n" +
+            "<tr>\n" +
+            "<td width=\"32\"><strong>5</strong></td>\n" +
+            "<td width=\"154\"><strong>Pakistan Bait-ul-Mal Scholarship</strong></td>\n" +
+            "<td width=\"436\">Pakistan Bait-ul-Mal is offering scholarships to the deserving students admitted in any Government College or University. The scholarship will be granted for one semester or years and continuation of the scholarship will remain applicable for next semester or year if the student successfully clears the existing period. Student fails in any subject will not eligible for Pakistan Bait-ul-Mal Scholarship next time.\n" +
+            "\n" +
+            "For more details see website&nbsp;<a href=\"http://www.pbm.gov.pk/downloads/criedu.jpg\" data-saferedirecturl=\"https://www.google.com/url?q=http://www.pbm.gov.pk/downloads/criedu.jpg&amp;source=gmail&amp;ust=1630125985571000&amp;usg=AFQjCNGP584GIbII16xY_mrfIMcHwnmTBA\" data-rel=\"lightbox-image-0\" data-rl_title=\"\" data-rl_caption=\"\" title=\"\">http://www.pbm.gov.pk/downloads/criedu.jpg</a>&nbsp;or visit Financial Aid Office of GCWUS.</td>\n" +
+            "</tr>\n" +
+            "<tr>\n" +
+            "<td width=\"32\"><strong>6</strong></td>\n" +
+            "<td width=\"154\"><strong>Rahmatul-Lil-Alamin</strong>\n" +
+            "\n" +
+            "<strong>Scholarship</strong>\n" +
+            "\n" +
+            "<strong>&nbsp;</strong></td>\n" +
+            "<td width=\"436\">The Government of Punjab introduced a special scholarship to the students. The name of this scholarship is&nbsp;<a href=\"https://fsconline.info/cm-usman-buzdar-announced-rahmatul-lil-alameen-scholarship/\" data-saferedirecturl=\"https://www.google.com/url?q=https://fsconline.info/cm-usman-buzdar-announced-rahmatul-lil-alameen-scholarship/&amp;source=gmail&amp;ust=1630125985571000&amp;usg=AFQjCNFnDDakxDLUrpHxp5rNdk38oYlSDA\">Rehmat Ul-Lil-Alameen</a>.&nbsp;They especially announced this scholarship for the bright and underprivileged students across the province. Due to COVID-19, many students are unable to pay their fees. They stopped their education because of their poor financial background. Therefore, the Chief Minister (CM) of Punjab, Usman Buzdar, assists the students from all the public sector colleges and universities in Punjab on a merit and need basis.\n" +
+            "\n" +
+            "<strong>Eligibility Criteria to Apply for Rehmatul-Lil-Alameen Scholarship Program: &#8211;</strong>\n" +
+            "\n" +
+            "·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Applicants belonging to any district should secure the highest marks and be verified by the Higher Education Department (HED).\n" +
+            "\n" +
+            "·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The score matched with the data provided by the exam boards in Punjab.\n" +
+            "\n" +
+            "The interested candidates can apply online by visiting the&nbsp;<a href=\"https://hedscholarships.punjab.gov.pk/sign-up\" data-saferedirecturl=\"https://www.google.com/url?q=https://hedscholarships.punjab.gov.pk/sign-up&amp;source=gmail&amp;ust=1630125985571000&amp;usg=AFQjCNE69h5AWyx6LoTeD4VURWFvPx45oQ\">HED Scholarship</a>&nbsp;website&nbsp;<a href=\"https://hed.punjab.gov.pk/scholar\" data-saferedirecturl=\"https://www.google.com/url?q=https://hed.punjab.gov.pk/scholar&amp;source=gmail&amp;ust=1630125985571000&amp;usg=AFQjCNFDHn-Hz0Tpoa5MnXUC8Mpx9GIw4Q\">https://hed.punjab.gov.pk/scholar</a>\n" +
+            "\n" +
+            "Or Visit Financial Aid Office of GCWUS</td>\n" +
+            "</tr>\n" +
+            "\n" +
+            "<tr>\n" +
+            "<td width=\"32\"><strong>7</strong></td>\n" +
+            "<td width=\"154\"><strong>Tabeer Scholarship Program 2021 Scholarship</strong></td>\n" +
+            "<td width=\"436\">&#8220;Tabeer scholarship for Punjab students is announced. University students pursuing undergraduate or postgraduate degree programs may apply. Tabeer scholarship offers scholarships worth 600,000/- Merit test for the scholarship will be conducted throughout the province and selected students will be awarded merit scholarships. <strong>The last date to apply for the scholarship is October 28, 2021</strong>.\n" +
+            "\n" +
+            "Tabeer Scholarship is a merit-based scholarship. Applicants will be required to appear in the test, and selected candidates will be informed. Students studying in Government and private universities may apply.&#8221; <br><a href=\"https://www.nta.org.pk\" target=\"_blank\" rel=\"noopener\">https://www.nta.org.pk</a>\n" +
+            "<img src=\"https://www.gcwus.edu.pk/wp-content/uploads/2021/10/Tabeer-Scholarship-Program-for-2021.jpeg\" class=\"img-responsive\">\n" +
+            "</td>\n" +
+            "</tr>\n" +
+            "</tbody>";
 }

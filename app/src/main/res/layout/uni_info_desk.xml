@@ -98,7 +98,7 @@
         android:background="#F5F5F5" />
 
     <TextView
-        android:id="@+id/tv_fee_policy"
+        android:id="@+id/tv_short_courses"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -108,7 +108,7 @@
         android:fontFamily="@font/lato_bold"
         android:foreground="?selectableItemBackground"
         android:gravity="center_vertical"
-        android:text="Fee Policy"
+        android:text="Short Courses"
         android:textColor="#363636"
         android:textSize="20sp"
         app:drawableStartCompat="@drawable/nextline"
@@ -121,7 +121,7 @@
         android:background="#F5F5F5" />
 
     <TextView
-        android:id="@+id/tv_rules"
+        android:id="@+id/tv_scholarships"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -131,7 +131,7 @@
         android:fontFamily="@font/lato_bold"
         android:foreground="?selectableItemBackground"
         android:gravity="center_vertical"
-        android:text="Rules and Regulation"
+        android:text="Scholarships"
         android:textColor="#363636"
         android:textSize="20sp"
         app:drawableStartCompat="@drawable/nextline"

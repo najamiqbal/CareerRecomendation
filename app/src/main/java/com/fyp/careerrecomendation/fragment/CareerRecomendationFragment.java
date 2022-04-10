@@ -1,6 +1,7 @@
 package com.fyp.careerrecomendation.fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -162,14 +163,20 @@ public class CareerRecomendationFragment extends Fragment {
             int selectedId = rg_matric.getCheckedRadioButtonId();
             // find the radiobutton by returned id
             rb_metric = view.findViewById(selectedId);
+            Log.d("Matric Course","user Data"+rb_metric.getText().toString());
             if (rb_metric.getText().toString().equals("Computer Science")){
                 s_metric="cs";
-            }else if (rb_metric.getText().toString().equals("Biology Science")){
+            }else if (rb_metric.getText().toString().equals("Biology science")){
                 s_metric="bio";
             }else {
                 s_metric="arts";
             }
 
+        }
+
+        if (Integer.parseInt(total) <= 39){
+            Toast.makeText(getContext(), "Sorry You have very low marks", Toast.LENGTH_SHORT).show();
+            valid = false;
         }
 
         if (s_gender.isEmpty()) {

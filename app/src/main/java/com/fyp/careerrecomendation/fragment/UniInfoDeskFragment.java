@@ -17,7 +17,7 @@ public class UniInfoDeskFragment extends Fragment implements View.OnClickListene
     View view;
 
 
-    TextView tv_departments,tv_exam_policy,tv_library_policy,tv_intership,tv_fee_policy,tv_rules;
+    TextView tv_departments,tv_exam_policy,tv_library_policy,tv_intership,tv_short_courses,tv_scholarship;
 
     @Nullable
     @Override
@@ -31,15 +31,15 @@ public class UniInfoDeskFragment extends Fragment implements View.OnClickListene
         tv_departments=view.findViewById(R.id.tv_departments);
         tv_library_policy=view.findViewById(R.id.tv_library_policy);
         tv_intership=view.findViewById(R.id.tv_internship_offered);
-        tv_fee_policy=view.findViewById(R.id.tv_fee_policy);
-        tv_rules=view.findViewById(R.id.tv_rules);
+        tv_short_courses=view.findViewById(R.id.tv_short_courses);
+        tv_scholarship=view.findViewById(R.id.tv_scholarships);
 
         tv_departments.setOnClickListener(this);
         tv_exam_policy.setOnClickListener(this);
         tv_library_policy.setOnClickListener(this);
         tv_intership.setOnClickListener(this);
-        tv_fee_policy.setOnClickListener(this);
-        tv_rules.setOnClickListener(this);
+        tv_short_courses.setOnClickListener(this);
+        tv_scholarship.setOnClickListener(this);
 
 
 
@@ -69,11 +69,11 @@ public class UniInfoDeskFragment extends Fragment implements View.OnClickListene
 
                 fragmentCall("internship");
                 break;
-            case R.id.tv_fee_policy:
-                fragmentCall("fee_policy");
+            case R.id.tv_short_courses:
+                fragmentCall("short_course");
                 break;
-            case R.id.tv_rules:
-                fragmentCall("rules");
+            case R.id.tv_scholarships:
+                fragmentCall("scholarship");
                 break;
 
         }
