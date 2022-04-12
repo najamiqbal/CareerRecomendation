@@ -25,6 +25,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.fyp.careerrecomendation.R;
 import com.fyp.careerrecomendation.utils.AppConstants;
 import com.fyp.careerrecomendation.utils.VolleyRequestsent;
+import com.google.android.material.textfield.TextInputLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -50,8 +51,9 @@ View view;
 
     String IsUserExist = "isUserExist";
     private ProgressDialog pDialog;
-    EditText et_name_user, et_mobile_user, et_address_user, et_email_user, et_password_user, et_confirm_password_user;
+    EditText et_name_user, et_mobile_user, et_address_user, et_email_user;
     Button registration_btn_user;
+    TextInputLayout et_password_user, et_confirm_password_user;
     String user_type = "2", user_name = "",user_phone="", user_email = "", user_address = "", user_password = "", user_confirm_password = "";
 
     @Nullable
@@ -94,8 +96,8 @@ View view;
         user_email = et_email_user.getText().toString();
         user_phone = et_mobile_user.getText().toString();
         user_address = et_address_user.getText().toString();
-        user_password = et_password_user.getText().toString();
-        user_confirm_password = et_confirm_password_user.getText().toString();
+        user_password = et_password_user.getEditText().getText().toString();
+        user_confirm_password = et_confirm_password_user.getEditText().getText().toString();
 
 
 

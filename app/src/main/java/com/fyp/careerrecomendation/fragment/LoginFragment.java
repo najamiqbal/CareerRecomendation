@@ -27,6 +27,7 @@ import com.fyp.careerrecomendation.models.UserModelClass;
 import com.fyp.careerrecomendation.utils.AppConstants;
 import com.fyp.careerrecomendation.utils.SharedPrefManager;
 import com.fyp.careerrecomendation.utils.VolleyRequestsent;
+import com.google.android.material.textfield.TextInputLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -38,7 +39,8 @@ import java.util.Map;
 public class LoginFragment extends Fragment implements View.OnClickListener{
 View view;
     TextView forgetpass, registration;
-    EditText et_email, et_pass;
+    EditText et_email;
+    TextInputLayout et_pass;
     Button btn_login;
     String t_email, t_password;
     String Login_url = "login";
@@ -108,7 +110,7 @@ View view;
     private boolean validate() {
         boolean valid = true;
         t_email = et_email.getText().toString().trim();
-        t_password = et_pass.getText().toString().trim();
+        t_password = et_pass.getEditText().getText().toString().trim();
 
         if (t_email.isEmpty()) {
             et_email.setError("Please Enter Phone");

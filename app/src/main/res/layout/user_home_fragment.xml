@@ -26,7 +26,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
+            android:background="@color/lightblue"
             android:padding="6dp">
 
             <ImageView
@@ -47,7 +47,7 @@
                 android:fontFamily="@font/lato_bold"
                 android:padding="5dp"
                 android:text="Career Recomendation"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
         </RelativeLayout>
@@ -65,7 +65,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/whatsapp_color"
+            android:background="@color/lightblue"
             android:padding="6dp">
 
             <ImageView
@@ -86,7 +86,7 @@
                 android:fontFamily="@font/lato_bold"
                 android:padding="5dp"
                 android:text="University Info Desk"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
         </RelativeLayout>
@@ -105,7 +105,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_200"
+            android:background="@color/lightblue"
             android:padding="6dp">
 
             <ImageView
@@ -126,7 +126,7 @@
                 android:fontFamily="@font/lato_bold"
                 android:padding="5dp"
                 android:text="Career Counselor's List"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
         </RelativeLayout>

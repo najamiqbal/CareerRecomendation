@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF">
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:id="@+id/scrollView">
+        android:fillViewport="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -21,22 +21,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/lato_bold"
                 android:text="Login"
+                android:textAlignment="center"
                 android:textColor="@color/colorPrimary"
                 android:textSize="30dp"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:fontFamily="@font/lato_bold"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp" />
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:id="@+id/emptylayout"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
+                android:layout_below="@+id/img"
                 android:layout_centerInParent="true"
-                android:orientation="vertical"
-                android:layout_below="@+id/img">
+                android:orientation="vertical">
 
             </LinearLayout>
 
@@ -44,10 +44,10 @@
                 android:id="@+id/et_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:layout_marginBottom="10dp"
                 android:layout_below="@id/emptylayout"
-                android:orientation="vertical">
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:padding="20dp">
 
                 <EditText
                     android:id="@+id/et_email"
@@ -56,8 +56,8 @@
                     android:background="@drawable/edit_text_style"
                     android:drawableLeft="@drawable/ic_email"
                     android:drawablePadding="10dp"
-                    android:hint="Enter Email"
                     android:fontFamily="@font/lato_regular"
+                    android:hint="Enter Email"
                     android:inputType="textEmailAddress"
                     android:padding="10dp"
                     android:textColor="@color/colorPrimary"
@@ -65,7 +65,28 @@
                     android:textSize="18sp"
                     tools:ignore="TouchTargetSizeCheck" />
 
-                <EditText
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:scrollbarSize="25dp"
+                    android:layout_marginTop="10dp"
+                    android:textColorHint="#B6B6B6"
+                    android:id="@+id/password"
+                    app:passwordToggleEnabled="true"
+                  >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="15"
+                        android:drawableLeft="@drawable/ic_lock"
+                        android:inputType="textPassword"
+                        android:textSize="20dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--<EditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -80,30 +101,30 @@
                     android:textColor="@color/colorPrimary"
                     android:textColorHint="#B7B7B7"
                     android:textSize="18sp"
-                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />-->
 
                 <TextView
                     android:id="@+id/forgetpass"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Forget your password?"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/lato_regular"
+                    android:layout_gravity="right"
                     android:layout_marginTop="8dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="Forget your password?"
                     android:textColor="@color/colorPrimary"
-                    android:layout_gravity="right"/>
+                    android:textSize="14sp" />
 
                 <Button
                     android:id="@+id/loginbtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/button_style"
-                    android:text="login now"
-                    android:fontFamily="@font/lato_bold"
                     android:layout_marginTop="15dp"
+                    android:background="@drawable/button_style"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="login now"
                     android:textAlignment="center"
                     android:textColor="@android:color/white"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -116,8 +137,8 @@
                 android:layout_centerHorizontal="true"
                 android:drawableRight="@drawable/ic_arrow_forward"
                 android:drawablePadding="10dp"
-                android:padding="5dp"
                 android:fontFamily="@font/lato_bold"
+                android:padding="5dp"
                 android:text="Register as new user"
                 android:textAllCaps="false"
                 android:textColor="@color/colorPrimary"

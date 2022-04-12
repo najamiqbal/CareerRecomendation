@@ -16,7 +16,12 @@
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_account"
-            android:title="My profile" />
+            android:title="My Profile" />
+
+        <item
+            android:id="@+id/nav_admin_dashboard"
+            android:icon="@drawable/ic_account"
+            android:title="Admin Dashboard" />
 
     </group>
 
@@ -26,7 +31,7 @@
             <item
                 android:id="@+id/nav_contact"
                 android:icon="@drawable/ic_contact_us"
-                android:title="contact us" />
+                android:title="Contact Us" />
             <item
                 android:id="@+id/nav_feedback"
                 android:icon="@drawable/ic_info"

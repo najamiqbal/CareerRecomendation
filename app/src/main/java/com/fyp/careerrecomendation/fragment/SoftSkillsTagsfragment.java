@@ -345,7 +345,7 @@ public class SoftSkillsTagsfragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        getActivity().setTitle("Your SoftSkills");
+        getActivity().setTitle("Your Soft Skills");
         super.onViewCreated(view, savedInstanceState);
     }
 

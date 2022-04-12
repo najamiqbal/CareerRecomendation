@@ -46,6 +46,14 @@ public class ConselorsListAdapter extends RecyclerView.Adapter<ConselorsListAdap
             Intent intentDial = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + modelClass.getUser_mobile()));
             context.startActivity(intentDial);
         });
+        holder.btn_whatsapp.setOnClickListener(view -> {
+            openWhatsApp(modelClass.getUser_mobile());
+        });
+        holder.btn_email.setOnClickListener(view -> {
+            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + modelClass.getUser_email()));
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "ColorBlindness issue");
+            context.startActivity(Intent.createChooser(emailIntent, "Chooser Title"));
+        });
     }
 
     @Override
@@ -55,7 +63,7 @@ public class ConselorsListAdapter extends RecyclerView.Adapter<ConselorsListAdap
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tv_name,tv_qualification,tv_office_address,tv_bio;
-        Button btn_call;
+        Button btn_call,btn_whatsapp,btn_email;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_name=itemView.findViewById(R.id.consultant_name);
@@ -63,8 +71,17 @@ public class ConselorsListAdapter extends RecyclerView.Adapter<ConselorsListAdap
             tv_office_address=itemView.findViewById(R.id.txt_address);
             tv_qualification=itemView.findViewById(R.id.txt_study);
             btn_call=itemView.findViewById(R.id.btn_call);
+            btn_email=itemView.findViewById(R.id.btn_email);
+            btn_whatsapp=itemView.findViewById(R.id.btn_whatsapp);
 
         }
+    }
+
+
+    private void openWhatsApp(String number) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+"+92"+number + "&text="+"hello"));
+        context.startActivity(intent);
     }
 
 }

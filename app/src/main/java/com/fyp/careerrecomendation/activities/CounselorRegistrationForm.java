@@ -21,6 +21,7 @@ import com.fyp.careerrecomendation.R;
 import com.fyp.careerrecomendation.fragment.LoginFragment;
 import com.fyp.careerrecomendation.utils.AppConstants;
 import com.fyp.careerrecomendation.utils.VolleyRequestsent;
+import com.google.android.material.textfield.TextInputLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,8 +33,9 @@ import java.util.Map;
 public class CounselorRegistrationForm extends AppCompatActivity {
     String RegisterUrl = "isUserExist";
     private ProgressDialog pDialog;
-    EditText et_name,et_intro_des,et_office_address,et_qualification ,et_mobile, et_city, et_email, et_password, et_confirm_password;
+    EditText et_name,et_intro_des,et_office_address,et_qualification ,et_mobile, et_city, et_email;
     Button registration_btn;
+    TextInputLayout et_password, et_confirm_password;
     String user_type = "1", con_name = "",con_qualification="",con_office_address="",
             con_intro="", con_email = "", con_mobile = "", con_city = "", con_password = "", con_confirm_password = "";
     @Override
@@ -136,8 +138,8 @@ public class CounselorRegistrationForm extends AppCompatActivity {
         con_qualification = et_qualification.getText().toString();
         con_intro = et_intro_des.getText().toString();
         con_office_address=et_office_address.getText().toString();
-        con_password=et_password.getText().toString();
-        con_confirm_password=et_confirm_password.getText().toString();
+        con_password=et_password.getEditText().getText().toString();
+        con_confirm_password=et_confirm_password.getEditText().getText().toString();
 
 
 

@@ -64,4 +64,10 @@ public class UserHomeFragment extends Fragment implements View.OnClickListener{
 
         }
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        getActivity().setTitle("Home");
+        super.onViewCreated(view, savedInstanceState);
+    }
 }

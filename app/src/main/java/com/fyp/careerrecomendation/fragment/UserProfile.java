@@ -25,6 +25,7 @@ import com.fyp.careerrecomendation.models.UserModelClass;
 import com.fyp.careerrecomendation.utils.AppConstants;
 import com.fyp.careerrecomendation.utils.SharedPrefManager;
 import com.fyp.careerrecomendation.utils.VolleyRequestsent;
+import com.google.android.material.textfield.TextInputLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -37,8 +38,9 @@ public class UserProfile extends Fragment {
     View view;
     private ProgressDialog pDialog;
     String updateProfile = "updateProfile";
-    EditText edit_name,edit_mobile,edit_addres,edit_email,edit_current_pass,new_pass;
+    EditText edit_name,edit_mobile,edit_addres,edit_email;
     Button edit_info_btn;
+    TextInputLayout edit_current_pass,new_pass;
     String edit_user_name="",UserId="",edit_user_email="",edit_user_address="",edit_user_mobile="",edit_user_photo="",edit_user_currentPass="",edit_user_newPass="";
     @Nullable
     @Override
@@ -86,8 +88,8 @@ public class UserProfile extends Fragment {
         edit_user_email = edit_email.getText().toString();
         edit_user_mobile = edit_mobile.getText().toString();
         edit_user_address = edit_addres.getText().toString();
-        edit_user_currentPass = edit_current_pass.getText().toString();
-        edit_user_newPass = new_pass.getText().toString();
+        edit_user_currentPass = edit_current_pass.getEditText().getText().toString();
+        edit_user_newPass = new_pass.getEditText().getText().toString();
         UserModelClass userModelClass = SharedPrefManager.getInstance(getContext()).getUser();
         UserId=userModelClass.getUser_id();
 

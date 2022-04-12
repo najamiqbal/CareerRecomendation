@@ -1,5 +1,6 @@
 <ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFF"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -152,36 +153,49 @@
                 android:scrollHorizontally="false"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
-            <EditText
-                android:id="@+id/user_password"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
-                android:padding="10dp"
-                android:fontFamily="@font/lato_regular"
+                android:scrollbarSize="25dp"
                 android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/ic_lock"
-                android:background="@drawable/edit_text_style"
-                android:drawablePadding="10dp"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18sp"
-                android:inputType="textPassword"
-                android:textColorHint="#B7B7B7"/>
-            <EditText
-                android:id="@+id/user_confirm_password"
+                android:textColorHint="#B6B6B6"
+                android:id="@+id/user_password"
+                app:passwordToggleEnabled="true"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="15"
+                    android:drawableLeft="@drawable/ic_lock"
+                    android:inputType="textPassword"
+                    android:textSize="20dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Confirm Password"
-                android:padding="10dp"
-                android:fontFamily="@font/lato_regular"
+                android:scrollbarSize="25dp"
                 android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/ic_lock"
-                android:background="@drawable/edit_text_style"
-                android:drawablePadding="10dp"
-                android:textColor="@color/colorPrimary"
-                android:textSize="18sp"
-                android:inputType="textPassword"
-                android:textColorHint="#B7B7B7"/>
+                android:textColorHint="#B6B6B6"
+                android:id="@+id/user_confirm_password"
+                app:passwordToggleEnabled="true"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="15"
+                    android:drawableLeft="@drawable/ic_lock"
+                    android:inputType="textPassword"
+                    android:textSize="20dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
 
             <Button

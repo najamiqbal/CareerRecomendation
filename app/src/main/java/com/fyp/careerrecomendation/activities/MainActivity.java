@@ -2,6 +2,7 @@ package com.fyp.careerrecomendation.activities;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -90,6 +91,14 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
             getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
             getSupportFragmentManager().beginTransaction().replace(R.id.user_main_frame,
                     new UserProfile()).addToBackStack("fragment").commit();
+
+        }
+        else if (id == R.id.nav_admin_dashboard) {
+
+            String url = "https://devapis.tk/career-recommendation/login.php";
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
 
         }
         else if (id == R.id.nav_feedback) {

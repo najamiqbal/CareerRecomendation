@@ -206,4 +206,10 @@ public class DepartmentsListFragment extends Fragment {
         VolleyRequestsent.getInstance().addRequestQueue(stringRequest);
     }
 
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        getActivity().setTitle("Results");
+        super.onViewCreated(view, savedInstanceState);
+    }
 }
