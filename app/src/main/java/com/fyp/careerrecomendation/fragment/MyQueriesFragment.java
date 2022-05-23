@@ -20,8 +20,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.fyp.careerrecomendation.R;
 import com.fyp.careerrecomendation.adapters.ConselorsListAdapter;
+import com.fyp.careerrecomendation.adapters.QueryListAdapter;
+import com.fyp.careerrecomendation.models.QueryModel;
 import com.fyp.careerrecomendation.models.UserModelClass;
 import com.fyp.careerrecomendation.utils.AppConstants;
+import com.fyp.careerrecomendation.utils.SharedPrefManager;
 import com.fyp.careerrecomendation.utils.VolleyRequestsent;
 
 import org.json.JSONArray;
@@ -29,48 +32,45 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class ConselorsListFragment extends Fragment {
+public class MyQueriesFragment extends Fragment {
+
     View view;
     RecyclerView dr_recyclerView;
-    List<UserModelClass> ItemList;
+    List<QueryModel> ItemList;
     private ProgressDialog pDialog;
-    ConselorsListAdapter mAdapter;
-    String getCounselorsUrl = "getCounselors";
-
+    QueryListAdapter mAdapter;
+    String getQueriesUrl = "getFeedbacks",user_id="";
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.conselers_list_fragment, container, false);
+        view=inflater.inflate(R.layout.my_queries_fragment,container,false);
         initilization();
         return view;
     }
 
-
     private void initilization() {
         pDialog = new ProgressDialog(getContext());
         pDialog.setCancelable(false);
-        dr_recyclerView = view.findViewById(R.id.recycler_view_doctorsList);
+        UserModelClass userModelClass= SharedPrefManager.getInstance(getContext()).getUser();
+        user_id=userModelClass.getUser_id();
+        dr_recyclerView = view.findViewById(R.id.recycler_view_queries);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         //GridLayoutManager gridLayoutManager=new GridLayoutManager(MainActivity.this,2);
         ItemList = new ArrayList<>();
         dr_recyclerView.setLayoutManager(linearLayoutManager);
-        GetDoctors();
+        GetMyQueries(user_id);
 
     }
 
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        getActivity().setTitle("Conselor's");
-        super.onViewCreated(view, savedInstanceState);
-    }
-
-    private void GetDoctors() {
+    private void GetMyQueries(String user_id) {
         pDialog.setMessage("please Wait....");
         pDialog.show();
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, AppConstants.mainurl + getCounselorsUrl, new Response.Listener<String>() {
+        Log.d("status", "CHECK=====>id" + user_id);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConstants.mainurl + getQueriesUrl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.d("Response is", response.toString());
@@ -79,23 +79,18 @@ public class ConselorsListFragment extends Fragment {
                     for (int i = 0; i < jsonArray.length(); i++) {
 
                         JSONObject jsonObject = (JSONObject) jsonArray.get(i);
-                        Log.d("status", "CHECK" + jsonObject.getString("mobile"));
+                        //Log.d("status", "CHECK" + jsonObject.getString("mobile"));
 
-                            UserModelClass model = new UserModelClass();
-                            model.setUser_name(jsonObject.getString("username"));
-                            model.setUser_email(jsonObject.getString("email"));
-                            model.setUser_mobile(jsonObject.getString("mobile"));
-                            model.setUser_address(jsonObject.getString("address"));
-                            model.setUser_id(jsonObject.getString("counselor_id"));
-                            model.setCounselor_bio(jsonObject.getString("description"));
-                            model.setQualification(jsonObject.getString("qualification"));
-                            model.setBusniss_address(jsonObject.getString("counselor_city"));
-                            ItemList.add(model);
+                        QueryModel model = new QueryModel();
+
+                        model.setQuery(jsonObject.getString("feedback"));
+                        model.setQuery_ans(jsonObject.getString("reply"));
+                        ItemList.add(model);
 
                     }
                     pDialog.dismiss();
                     if (ItemList != null) {
-                        mAdapter = new ConselorsListAdapter(getContext(), ItemList);
+                        mAdapter = new QueryListAdapter(getContext(), ItemList);
                         dr_recyclerView.setAdapter(mAdapter);
                     } else {
                         Toast.makeText(getContext(), "NO DATA", Toast.LENGTH_SHORT).show();
@@ -115,7 +110,20 @@ public class ConselorsListFragment extends Fragment {
 
 
             }
-        });
+        }){
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put("user_id", user_id);
+                return params;
+            }
+        };
         VolleyRequestsent.getInstance().addRequestQueue(stringRequest);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        getActivity().setTitle("My Queries");
+        super.onViewCreated(view, savedInstanceState);
     }
 }

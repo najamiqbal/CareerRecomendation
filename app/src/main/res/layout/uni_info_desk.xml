@@ -143,4 +143,27 @@
         android:layout_marginTop="10dp"
         android:background="#F5F5F5" />
 
+    <TextView
+        android:id="@+id/tv_faqs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:drawablePadding="13sp"
+        android:focusable="true"
+        android:fontFamily="@font/lato_bold"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center_vertical"
+        android:text="FAQ's"
+        android:textColor="#363636"
+        android:textSize="20sp"
+        app:drawableStartCompat="@drawable/nextline"
+        app:drawableEndCompat="@drawable/ic_arrow_forward" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#F5F5F5" />
+
 </LinearLayout>

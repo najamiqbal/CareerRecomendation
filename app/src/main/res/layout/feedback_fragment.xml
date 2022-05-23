@@ -14,7 +14,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:textAlignment="center"
-        android:text="Your FeedBack"
+        android:text="Your Query"
         android:fontFamily="@font/lato_bold"
         android:textColor="@color/colorPrimary"
         android:textSize="30sp"/>
@@ -29,7 +29,7 @@
         android:layout_marginEnd="10dp"
         android:background="@drawable/comentboxstyle"
         android:gravity="top|start"
-        android:hint="Write your feedback here"
+        android:hint="Write your Query here"
         android:inputType="textMultiLine"
         android:lines="8"
         android:fontFamily="@font/lato_regular"
@@ -48,7 +48,7 @@
         android:layout_marginTop="35dp"
         android:fontFamily="@font/lato_bold"
         android:background="@drawable/button_style"
-        android:text="Submit"
+        android:text="Sent Query"
         android:textColor="#FFF"
         android:textSize="20sp" />
 </RelativeLayout>

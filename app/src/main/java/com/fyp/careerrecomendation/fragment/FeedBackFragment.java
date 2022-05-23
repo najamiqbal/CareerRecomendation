@@ -123,7 +123,7 @@ public class FeedBackFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        getActivity().setTitle("FeedBack");
+        getActivity().setTitle("Sent Query");
         super.onViewCreated(view, savedInstanceState);
     }
 }

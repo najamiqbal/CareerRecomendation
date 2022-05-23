@@ -17,7 +17,7 @@ public class UniInfoDeskFragment extends Fragment implements View.OnClickListene
     View view;
 
 
-    TextView tv_departments,tv_exam_policy,tv_library_policy,tv_intership,tv_short_courses,tv_scholarship;
+    TextView tv_departments,tv_exam_policy,tv_library_policy,tv_intership,tv_short_courses,tv_scholarship,tv_faqs;
 
     @Nullable
     @Override
@@ -33,6 +33,7 @@ public class UniInfoDeskFragment extends Fragment implements View.OnClickListene
         tv_intership=view.findViewById(R.id.tv_internship_offered);
         tv_short_courses=view.findViewById(R.id.tv_short_courses);
         tv_scholarship=view.findViewById(R.id.tv_scholarships);
+        tv_faqs=view.findViewById(R.id.tv_faqs);
 
         tv_departments.setOnClickListener(this);
         tv_exam_policy.setOnClickListener(this);
@@ -40,6 +41,7 @@ public class UniInfoDeskFragment extends Fragment implements View.OnClickListene
         tv_intership.setOnClickListener(this);
         tv_short_courses.setOnClickListener(this);
         tv_scholarship.setOnClickListener(this);
+        tv_faqs.setOnClickListener(this);
 
 
 
@@ -74,6 +76,15 @@ public class UniInfoDeskFragment extends Fragment implements View.OnClickListene
                 break;
             case R.id.tv_scholarships:
                 fragmentCall("scholarship");
+                break;
+            case R.id.tv_faqs:
+
+                FAQFragment fragment = new FAQFragment();
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.user_main_frame, fragment);
+                fragmentTransaction.addToBackStack("fragment");
+                fragmentTransaction.commit();
+
                 break;
 
         }

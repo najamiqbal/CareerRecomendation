@@ -63,7 +63,6 @@ View view;
         btn_login=view.findViewById(R.id.loginbtn);
 
 
-
         // click
         registration.setOnClickListener(this);
         forgetpass.setOnClickListener(this);

@@ -57,4 +57,24 @@
     <string name="rgb_formate">RGB: 0,0,0</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+    <string name="faq1">Does GCWUS has proper lab facilities?</string>
+    <string name="ans1">Yes, GCWUS has well equipped laboratories to support the programs being offered.</string>
+    <string name="ans2"><![CDATA[Yes, GCWUS has modern classrooms and latest well equipped computer labs as well as internet facility at campus & student hostel.]]></string>
+    <string name="faq2">Does GCWUS has sufficient computer and internet facilities?</string>
+    <string name="faq3">Does GCWUS has a library?</string>
+    <string name="ans3">Yes, GCWUS has a resourceful library with sufficient current editions of books, reference material and other academic and literary material to support the programs being offered.</string>
+    <string name="faq4">When and where merit lists are displayed?</string>
+    <string name="ans4">Merit lists are displayed on university website and also on campus (notice boards) as per admission schedule (after the closing date to apply for admission in GCWUS).</string>
+    <string name="ans5">Yes</string>
+    <string name="faq5">Can I apply for more than one programs?</string>
+    <string name="faq6">Which scholarships does GCWUS offer?</string>
+    <string name="ans6">GCWUS offers merit and need based scholarships. Please visit the Scholarships page for further details.</string>
+    <string name="faq7">What is a GPA?</string>
+    <string name="ans7">Grade Point Average (GPA) is a numeric indicator for a student\'s academic performance, calculated on a scale of 4.0.</string>
+    <string name="faq8">How many times are exams taken in one semester?</string>
+    <string name="ans8">The major exams occur twice in one semester. Midterms occur after half a semester and Final exams occur at the end of the semester</string>
+    <string name="faq9">Can i get hostel facility?</string>
+    <string name="ans9">Yes, GCWUS does provide hostel facilities.</string>
+    <string name="faq10">Can i get transportation facility ?</string>
+    <string name="ans10">Yes, GCWUS does provide transport facility to students.</string>
 </resources>

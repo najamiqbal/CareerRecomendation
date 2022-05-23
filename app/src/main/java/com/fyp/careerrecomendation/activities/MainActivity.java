@@ -11,6 +11,7 @@ import com.fyp.careerrecomendation.R;
 import com.fyp.careerrecomendation.fragment.FeedBackFragment;
 import com.fyp.careerrecomendation.fragment.ConselorsListFragment;
 import com.fyp.careerrecomendation.fragment.ContactUsFragment;
+import com.fyp.careerrecomendation.fragment.MyQueriesFragment;
 import com.fyp.careerrecomendation.fragment.UserHomeFragment;
 
 import com.fyp.careerrecomendation.fragment.UserProfile;
@@ -93,6 +94,14 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                     new UserProfile()).addToBackStack("fragment").commit();
 
         }
+        else if (id == R.id.nav_my_queries) {
+
+            getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            getSupportFragmentManager().beginTransaction().replace(R.id.user_main_frame,
+                    new MyQueriesFragment()).addToBackStack("fragment").commit();
+
+        }
+
         else if (id == R.id.nav_admin_dashboard) {
 
             String url = "https://devapis.tk/career-recommendation/login.php";
